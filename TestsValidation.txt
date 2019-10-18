@@ -1,0 +1,55 @@
+Ce document contient un sous-ensemble des tests de validation du programme SUBOO :
+
+Rappel du patron du test de validation :
+
+Titre : Identifiant explicite
+Contexte : Où on se trouve dans le programme
+Entrée : Inputs
+Scénario : Décrire ce que l'utilisateur fait, sans s'intéresser au système
+Résultat : Retour par le système
+Vérification : Comment on sait si c'est bon
+
+Test de validation :
+
+UC01 - Obtenir BO
+
+Titre : Initialisation (UC01-1)
+Contexte : Rien dans la séquence
+Entrées : Rien
+Scénario : L'utilisateur clique sur un bouton appelé "Optimiser un objectif"
+Résultat : Le système affiche la fenêtre avec le formulaire de sélection de l'état final souhaité
+Validation : Si le système affiche correctement la fenêtre de sélection de l'état final souhaité, on est content.
+
+Titre : Calcul du build order réussi (UC01-3)
+Contexte : On doit avoir passé la page d'accueil et la page de sélection du formulaire.
+Entrées : Un ensemble d'entrées dans un ensemble de formulaires de sélection
+Scénario : L'utilisateur clique sur le bouton appelé "Calculer mon BO"
+Résultat : Le système affiche une fenêtre avec une liste d'instructions séquentielles
+Validation : On considère qu'on est content quand la liste d'instruction s'affiche, et que les instructions proposées sont bien légales pour les règles du jeu.
+
+Titre : Calcul du build order echoué (UC01-4)
+Contexte : On doit avoir passé la page d'accueil et la page de sélection du formulaire.
+Entrées : Un ensemble d'entrées dans un ensemble de formulaires de choix
+Scénario : L'utilisateur clique sur le bouton appelé "Calculer mon BO"
+Résultat : Le système affiche une fenêtre qui rend un message d'erreur disant "Je n'ai pas pu calculer de BO" (et la raison de cette erreur : complexité trop grande, file d'attente trop chargée)
+Validation : On considère qu'on est content quand le message d'erreur s'affiche correctement.
+
+Titre : Retour à l'accueil (UC01-5)
+Contexte : On doit être sur la page d'erreur à laquelle on arrive à la fin du test 4.
+Entrée : Rien
+Scénario : L'utilisateur clique sur le bouton "Retour au début"
+Résultat : Le système affiche la fenêtre d'accueil
+Validation : On a bien la fenêtre d'accueil affichée
+
+
+
+
+
+Titre : Choix de la version (UC??-2)
+Contexte : On doit avoir passé la page d'accueil
+Entrées : Une entrée dans le menu déroulant
+Scénario : L'utilisateur clique sur le bouton "Valider la version"
+Résultat : Le système affiche la fenêtre avec le formulaire de sélection de l'état final souhaité.
+Validation : Si le système affiche correctement la fenêtre de sélection de l'état final, on est content.
+
+
